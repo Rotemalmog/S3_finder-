@@ -127,9 +127,3 @@ def search_and_download_file(file_name):
     else:
         print(f"File '{file_name}' does not exist in the bucket '{bucket_name}'.")
         return None
-
-
-s3_client = authenticate_to_aws("s3")
-if s3_client:
-    print(s3_client.list_buckets())
-
