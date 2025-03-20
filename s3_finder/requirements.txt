@@ -1,0 +1,4 @@
+flask
+boto3
+finder
+markupsafe==2.0.1

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Search</title>
+    <style>
+        .container {
+            display: flex;  /* Places buttons in a row */
+            align-items: center;  /* Aligns them vertically */
+            gap: 15px;  /* Adds space between buttons */
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .download-btn {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+
+        .back-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    {% if file_name %}
+        <h2>Download the file "{{ file_name }}":</h2>
+        <div class="container">
+            <!-- Download Button -->
+            <a href="{{ url }}" target="_blank" download>
+                <button class="download-btn">Download</button>
+            </a>
+
+            <!-- Back to Search Button -->
+            <a href="{{ url_for('home') }}">
+                <button class="back-btn">Back to Search</button>
+            </a>
+        </div>
+    {% endif %}
+</body>
+</html>
