@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "images_rotem" {
+resource "aws_s3_bucket" "images_buket" {
   bucket = "images_buket"  # S3 bucket name; must be globally unique
   tags = {
     Name        = "images_buket"
@@ -7,5 +7,5 @@ resource "aws_s3_bucket" "images_rotem" {
 }
 
 output "bucket_name" {
-  value = aws_s3_bucket.images_rotem.bucket
+  value = aws_s3_bucket.images_buket.bucket
 }
